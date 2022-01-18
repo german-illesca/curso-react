@@ -1,5 +1,7 @@
 import React from 'react';
 import { Navbar,Nav,NavDropdown, Container } from 'react-bootstrap';
+import CartWidget from '../components/CartWidget';
+
 class NavBar extends React.Component{
     render(){
         return(
@@ -20,7 +22,7 @@ class NavBar extends React.Component{
                 </NavDropdown>
                 </Nav>
                 <Nav>
-                <Nav.Link href="#carrito">Carrito</Nav.Link>
+                <Nav.Link href="#carrito"><CartWidget /></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Container>
