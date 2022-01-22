@@ -40,3 +40,26 @@
         transform: rotate(360deg);
     }
 }
+
+.control-producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    border: 1px black solid;
+    align-items: center;
+    margin: 2px;
+}
+
+.boton-producto-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    align-items: center;
+    margin: 2px;
+}
+
+.boton-producto {
+    width: 100%;
+}
