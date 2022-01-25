@@ -1,3 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
 .App {
     text-align: center;
 }
@@ -62,4 +69,45 @@
 
 .boton-producto {
     width: 100%;
+}
+
+.novedadesDiv {
+    width: 98%;
+}
+
+.fondoItem {
+    width: 20%;
+    border: black solid 0.1rem;
+    border-radius: 1.25rem;
+    background-color: rgb(240, 225, 167);
+    padding: 0.3rem;
+    margin-left: 0.1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.fondoItem h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+    font-weight: 700;
+}
+
+.fondoItem #descripcion {
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin: 0 0 0.2rem;
+}
+
+.fondoItem #precio {
+    font-weight: bold;
+    text-align: right;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding-right: 0.5rem;
+}
+
+.img-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
 }

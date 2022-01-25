@@ -2,6 +2,7 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import ItemCount from './components/ItemCount';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
     const showAddItems = (items) =>{
@@ -12,7 +13,7 @@ function App() {
         <>
             <NavBar />
             <br></br>
-            <h1> Contenido de la página </h1>
+            <ItemListContainer greeting="Bienvenidos a nuestra web"/>
             <br></br>
             <ItemCount stock="5" inicial="1" onAdd={showAddItems}/>
         </>
