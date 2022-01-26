@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Item from "./Item";
 
-const items = [{
+const productos = [{
     "codigo": 11,
     "nombre": "Pullover con gorrito",
     "descripcion": "Color a elección, medidas de 0 a 2 años",
@@ -50,7 +51,31 @@ const items = [{
     "precio": 1500
 }]
 
+let getProductos = () => {
+    return productos;
+}
+
+const is_ok=true;
+
+let consultarProductos = (time, task) => {
+    return new Promise( (resolve, reject) => {
+        if (is_ok){
+            setTimeout(() => {
+                resolve(task);
+            }, time);    
+        } else {
+            reject("Error - no encontro items");
+        }
+    });
+}
+
 const ItemList = () => {
+    const [items, SetItems] = useState([]);
+
+    consultarProductos(2000, getProductos()).then( productos => {
+        SetItems(productos);
+    }).catch ( err => { console.log("No encontraron productos")});
+
     return (
         //recibe items y los mapea en componente item
         <>
@@ -63,7 +88,6 @@ const ItemList = () => {
                 })
             }
         </>
-
     );
 }
 
