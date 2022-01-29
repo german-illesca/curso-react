@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 10%;
+    width: 10rem;
     border: 1px black solid;
     align-items: center;
     margin: 2px;
@@ -62,7 +62,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 10%;
+    width: 10rem;
     align-items: center;
     margin: 2px;
 }
@@ -109,5 +109,34 @@
 .img-thumbnail {
     width: 100%;
     height: auto;
-    border-radius: 1.5rem;
+    align-self: center;
+}
+
+.img-div-detail {
+    display: flex;
+    padding: 1rem;
+}
+
+.precio {
+    font-weight: bold;
+    text-align: right;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding-right: 0.5rem;
+}
+
+.detalle-producto {
+    margin: 2rem;
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    * {
+        font-size: 12px;
+    }
 }

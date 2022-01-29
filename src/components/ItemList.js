@@ -5,7 +5,8 @@ const ItemList = (props) => {
                 <img className='img-thumbnail' src={props.item.urlImagen} alt={props.item.nombre} loading="lazy" />
                 <h4>{props.item.nombre}</h4>
                 <p id='descripcion'>{props.item.descripcion}</p>
-                <p id='precio'>${props.item.precio}</p>
+                <br />
+                <p id='precio'>Precio: ${props.item.precio}</p>
             </div>
         </>
     )
