@@ -2,14 +2,21 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import productos from "./datos/productos";
 import customFetch from "../utils/customFetch";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     const [items, SetItems] = useState([]);
+    const param = useParams();
 
     useEffect(() => {
-        customFetch(2000, productos).then( productos => {
-            SetItems(productos);
-        }).catch ( err => { console.log("No encontraron productos")});
+        customFetch(2000, 
+            productos.filter(item => {
+                if (param.id) return item.categoria === Number(param.id);     
+                return item;
+            }))
+            .then( productos => {
+                SetItems(productos);
+            }).catch ( err => { console.log("No encontraron productos")})
     }, []);
 
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar,Nav,NavDropdown, Container } from 'react-bootstrap';
+import { Navbar,Nav, Container } from 'react-bootstrap';
 import CartWidget from '../components/CartWidget';
 
 class NavBar extends React.Component{
@@ -7,19 +7,14 @@ class NavBar extends React.Component{
         return(
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">VeruVeru bebés</Navbar.Brand>
+            <Navbar.Brand href="/">VeruVeru bebés</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#contacto">Contacto</Nav.Link>
-                <NavDropdown title="Opciones" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Tabla de Medidas</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Medios de Pago</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Formas de Envío</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Como comprar?</NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/category/1">Lana</Nav.Link>
+                <Nav.Link href="/category/2">Tela</Nav.Link>
+                <Nav.Link href="/category/3">Juguetes</Nav.Link>
+                <Nav.Link href="/category/4">Combos</Nav.Link>
                 </Nav>
                 <Nav>
                 <Nav.Link href="#carrito"><CartWidget /></Nav.Link>

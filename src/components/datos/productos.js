@@ -28,7 +28,7 @@ const productos = [{
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illo, sunt tenetur magni ipsam vel perspiciatis veniam doloribus esse recusandae eos unde praesentium officiis beatae, facilis aperiam. Voluptatibus, officiis earum!",
     "urlImagen": "/images/products/combo-body-saco-y-pantalon-1-1.jpg",
     "stock": 97,
-    "categoria": 2,
+    "categoria": 4,
     "precio": 3000
 }, {
     "codigo": 15,

@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import customFetch from "../utils/customFetch";
 import productos from "./datos/productos";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const [item, SetItem] = useState([]);
+    const param=useParams();
 
     useEffect(() => {
-        customFetch(2000, productos[5]).then( producto => {
+        customFetch(2000, productos.find( producto => producto.codigo === Number(param.id))).then( producto => {
             SetItem(producto);
         }).catch ( err => { console.log("No encontraron productos")});
     }, []);

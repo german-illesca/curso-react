@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Sobre la aplicacion
+Es una aplicacion realizada para una tienda que vende articulos para bebes confeccionados a mano, ya sea en lana o en tela, así como juguetes de apego tejidos.
+
+### Estructura del sitio
+El sitio cuenta con las siguientes páginas
+
+- pagina principal, conteniendo el catalogo de todos los productos que ofrece la tienda
+- paginas de cada categoria, habiendo 4 categorias que son Lana, Tela, Juguetes y Combos (con productos de distintas categorias)
+- pagina de detalle para cada item, en donde se puede ver informacion detallada del producto seleccionado y en donde se pueden agregar productos al carrito de compras
+- carrito de compras
