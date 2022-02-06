@@ -3,7 +3,7 @@ const productos = [{
     "nombre": "Pullover con gorrito",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illo, sunt tenetur magni ipsam vel perspiciatis veniam doloribus esse recusandae eos unde praesentium officiis beatae, facilis aperiam. Voluptatibus, officiis earum!",
     "urlImagen": "/images/products/pullover-con-gorro-beige-1-1.jpg",
-    "stock": 50,
+    "stock": 10,
     "categoria": 1,
     "precio": 2850
 }, {
@@ -11,7 +11,7 @@ const productos = [{
     "nombre": "Body con diseño",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus illo, sunt tenetur magni ipsam vel perspiciatis veniam doloribus esse recusandae eos unde praesentium officiis beatae, facilis aperiam. Voluptatibus, officiis earum!",
     "urlImagen": "/images/products/body-con-dibujos-varon-1-1.jpg",
-    "stock": 44,
+    "stock": 15,
     "categoria": 2,
     "precio": 1560
 }, {
