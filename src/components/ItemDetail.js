@@ -1,22 +1,30 @@
+import { useContext, useState } from "react";
+import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
-import showAddItems from "../utils/showAddItems";
 
-const ItemDetail = (props) => {
+const ItemDetail = ({item}) => {
+    const datos=useContext(CartContext);
+
+    const showAddItems = (cantItems) => {
+        //alert(`Usted ha seleccionado ${items} ítems`);
+        datos.addItem(item, cantItems);
+    };
+
     return (
         <>
             <div className="img-div-detail">
-                <img className='img-thumbnail' src={props.item.urlImagen} alt={props.item.nombre} loading="lazy" />
+                <img className='img-thumbnail' src={item.urlImagen} alt={item.nombre} loading="lazy" />
             </div>
             <div className="detalle-producto">
                 <div>
-                    <h2>{props.item.nombre}</h2>
-                    <p>{props.item.descripcion}</p>
-                    <p className="precio">Stock: {props.item.stock}</p>
-                    <p className="precio">Precio: ${props.item.precio}</p>
+                    <h2>{item.nombre}</h2>
+                    <p>{item.descripcion}</p>
+                    <p className="precio">Stock: {item.stock}</p>
+                    <p className="precio">Precio: ${item.precio}</p>
                 </div>
                 <br />
                 <div>
-                    <ItemCount stock={props.item.stock} inicial="0" onAdd={showAddItems}/>
+                    <ItemCount stock={item.stock} inicial="0" onAdd={showAddItems}/>
                 </div>
             </div>
         </>

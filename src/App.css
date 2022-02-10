@@ -71,6 +71,16 @@
     width: 100%;
 }
 
+.boton-vaciar {
+    width: 10rem;
+    margin-bottom: 10px;
+}
+
+.boton-quitar {
+    width: 10rem;
+    margin-bottom: 10px;
+}
+
 .novedadesDiv {
     width: 98%;
 }

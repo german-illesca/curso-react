@@ -31,7 +31,7 @@ const ItemListContainer = () => {
                                 <ItemList item={item} key={item.codigo}/>
                             );
                         })
-                        : <div>No se han encontrado productos</div>
+                        : <div>Cargando...</div>
                     }
                 </div>
             </div>

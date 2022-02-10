@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice} from "./styledComponents";
+import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice, ImageContainer} from "./styledComponents";
 
 const Cart = () => {
     const datos = useContext(CartContext);
@@ -9,16 +9,23 @@ const Cart = () => {
         <>
             <WrapperCart>
                 <TitleCart>Tu Carrito de Compras</TitleCart>
+                {datos.carrito.length > 0 
+                    ? <button type="button" className="btn btn-primary boton-vaciar" onClick={datos.removeAllItems}>Vaciar carrito</button>
+                    : <span>
+                        <b>Su carrito de compras se encuentra vacío</b>
+                      </span>
+                }       
                 <ContentCart>
-                <p>{datos.carrito}</p>
                     {
-                        datos.carrito.map( (item, index) => {
-                            <Product>
+                        datos.carrito.map( (item, index) => 
+                            <Product key={index}>
                                 <ProductDetail>
-                                    <ImageCart src="https://res.cloudinary.com/hdsqazxtw/image/upload/v1559681445/logo_coderhouse_1_rec5vl.png" />
+                                    <ImageContainer>
+                                        <ImageCart src={item.urlImagen} alt={item.nombre}/>
+                                    </ImageContainer>
                                     <Details>
                                     <span>
-                                        <b>Producto:</b> JESSIE THUNDER SHOES
+                                        <b>{item.nombre}</b>
                                     </span>
                                     </Details>
                                 </ProductDetail>
@@ -26,10 +33,11 @@ const Cart = () => {
                                     <ProductAmountContainer>
                                     <ProductAmount>2 unidades</ProductAmount>
                                     </ProductAmountContainer>
-                                    <ProductPrice>$ 30 c/uno</ProductPrice>
+                                    <ProductPrice>$ {item.precio} c/uno</ProductPrice>
+                                    <button type="button" className="btn btn-primary boton-quitar" onClick={() => datos.removeItem(item)}>Quitar</button>
                                 </PriceDetail>
                             </Product>
-                        })
+                        )
                     }
                 </ContentCart>
             </WrapperCart>

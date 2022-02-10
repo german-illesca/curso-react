@@ -17,7 +17,7 @@ class NavBar extends React.Component{
                 <Nav.Link href="/category/4">Combos</Nav.Link>
                 </Nav>
                 <Nav>
-                <Nav.Link href="#carrito"><CartWidget /></Nav.Link>
+                <Nav.Link href="/cart"><CartWidget /></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Container>
