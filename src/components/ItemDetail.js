@@ -1,13 +1,16 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item}) => {
+    const [itemCount, setItemCount]=useState(0);
     const datos=useContext(CartContext);
 
     const showAddItems = (cantItems) => {
         //alert(`Usted ha seleccionado ${items} ítems`);
-        datos.addItem(item, cantItems);
+        datos.addToCart(item, cantItems);
+        setItemCount(cantItems);
     };
 
     return (
@@ -24,7 +27,7 @@ const ItemDetail = ({item}) => {
                 </div>
                 <br />
                 <div>
-                    <ItemCount stock={item.stock} inicial="0" onAdd={showAddItems}/>
+                    <ItemCount stock={item.stock} inicial={itemCount} onAdd={showAddItems}/>
                 </div>
             </div>
         </>

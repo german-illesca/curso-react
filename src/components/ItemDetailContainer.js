@@ -6,13 +6,13 @@ import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const [item, SetItem] = useState([]);
-    const param=useParams();
+    const {id} = useParams();
 
     useEffect(() => {
-        customFetch(2000, productos.find( producto => producto.codigo === Number(param.id))).then( producto => {
+        customFetch(2000, productos.find( producto => producto.codigo === Number(id))).then( producto => {
             SetItem(producto);
         }).catch ( err => { console.log("No encontraron productos")});
-    }, []);
+    }, [id]);
 
     return (
         <>

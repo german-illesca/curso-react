@@ -6,12 +6,12 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [items, SetItems] = useState([]);
-    const param = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
         customFetch(2000, 
             productos.filter(item => {
-                if (param.id) return item.categoria === Number(param.id);     
+                if (id) return item.categoria === Number(id);     
                 return item;
             }))
             .then( productos => {

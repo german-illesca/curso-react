@@ -31,7 +31,7 @@ const Cart = () => {
                                 </ProductDetail>
                                 <PriceDetail>
                                     <ProductAmountContainer>
-                                    <ProductAmount>2 unidades</ProductAmount>
+                                    <ProductAmount>{item.cantidad} unidades</ProductAmount>
                                     </ProductAmountContainer>
                                     <ProductPrice>$ {item.precio} c/uno</ProductPrice>
                                     <button type="button" className="btn btn-primary boton-quitar" onClick={() => datos.removeItem(item)}>Quitar</button>
