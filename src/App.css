@@ -139,6 +139,14 @@
     margin: 2rem;
 }
 
+.linkMenu {
+    margin-right: 4px;
+    margin-left: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
 @media screen and (min-width: 641px) and (max-width: 768px) {
     * {
         font-size: 14px;
