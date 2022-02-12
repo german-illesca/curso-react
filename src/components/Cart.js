@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice, ImageContainer} from "./styledComponents";
 
@@ -10,11 +11,27 @@ const Cart = () => {
             <WrapperCart>
                 <TitleCart>Tu Carrito de Compras</TitleCart>
                 {datos.carrito.length > 0 
-                    ? <button type="button" className="btn btn-primary boton-vaciar" onClick={datos.removeAllItems}>Vaciar carrito</button>
-                    : <span>
-                        <b>Su carrito de compras se encuentra vacío</b>
-                      </span>
-                }       
+                    ? <div className="div-flex">
+                        <div>
+                            <button type="button" className="btn btn-primary boton-cart" onClick={datos.removeAllItems}>Vaciar carrito</button>
+                        </div>
+                        <div>
+                        <Link to="/"><button type="button" className="btn btn-primary boton-cart">Ir al catálogo</button></Link>
+                        </div>
+                        <div className="total-div">$ {datos.impTotal}</div>
+                      </div>
+                    : <div> 
+                        <br/>
+                        <span>
+                            <b>Su carrito de compras se encuentra vacío</b>
+                        </span>
+                        <br/><br/>
+                        <div>
+                            <Link to="/"><button type="button" className="btn btn-primary boton-cart">Ir al catálogo</button></Link>
+                        </div>
+                      </div>
+                }
+
                 <ContentCart>
                     {
                         datos.carrito.map( (item, index) => 
