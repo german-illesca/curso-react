@@ -8,7 +8,7 @@ class NavBar extends React.Component{
         return(
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="/">VeruVeru bebés</Navbar.Brand>
+            <Link className="logo" to="/">VeruVeru bebés</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
