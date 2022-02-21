@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { firebaseQueryById } from "../utils/firebaseFetch";
 // import customFetch from "../utils/customFetch";
 // import fireStoreFetch from "../utils/firebaseFetch";
-import fireStoreQuery from "../utils/firebaseQueryById";
 // import productos from "./datos/productos";
 import ItemDetail from "./ItemDetail";
 
@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
         //     .catch (err => console.log(err));
 
         //Query de un producto por su id
-        fireStoreQuery(Number(id))
+        firebaseQueryById(Number(id))
             .then ( producto => SetItem(producto))                
             .catch (err => console.log(err));
     }, [id]);
