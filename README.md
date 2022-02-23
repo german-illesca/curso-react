@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# VeruVeru Web
+
+VeruVeru es una web de e-comerce dedicada a la venta de ropa para bebés. En la misma hay un catálogo de productos, y se pueden realizar pedidos a través de un carrito de compras implementado en la misma.
+
+![Screenshot](veruveru-1.png)
+
+![Screenshot](veruveru-2.png)
+
+![Screenshot](veruveru-3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
